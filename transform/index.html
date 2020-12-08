@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .box-container {
+            display: flex;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,0,0.7);
+            border: 2px solid #000;
+        }
+        .box:hover {
+        /*  트랜스폼의 기본 기준점은 센터,센터이다 */
+            /* transform: scale(2) rotate(45deg); */
+            /* transform:  skewY(-30deg); */
+            /* transform: translate(30px, 10px); */
+            /* transform: translateX(30px);     */
+            /* transform: scale(2); */
+            transform: rotate(30deg);
+
+        /*  트랜스 폼 오리진 = 트랜스폼이 적용되는 기준 점을 바꿔줌 */
+            /* transform-origin: left top; */
+        /*  트랜스폼 오리진은 숫자로도 가능 */
+        /* 첫번째 자리는 x 두번깨는 y */
+            transform-origin: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transform</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quos fugit voluptatum quae eveniet? Modi ex necessitatibus ea, voluptatum quisquam velit quo, blanditiis quod, hic sequi unde! Consequuntur, autem reprehenderit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt esse minus eveniet numquam fugit neque quasi sunt quod vero? Sapiente quam ipsa saepe ipsum quia perferendis officiis illum veritatis reiciendis!</p>
+    <div class="box-container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus quos fugit voluptatum quae eveniet? Modi ex necessitatibus ea, voluptatum quisquam velit quo, blanditiis quod, hic sequi unde! Consequuntur, autem reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius corporis tempore reprehenderit blanditiis, sapiente commodi dicta expedita incidunt recusandae non exercitationem repellat quibusdam temporibus, libero necessitatibus id tenetur neque.</p>
+</body>
+</html>
