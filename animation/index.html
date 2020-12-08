@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* 애니메이션과 트랜지션의 가장 큰 차이점은 키 프레임이 있다는 것이다. 키 프레임은 해당 요소가 동작 중에 다른 동작으로 변화되는 포인트를 말하는 것인데, 트랜지션은 키 프레임이 없어 이러한 변화를 줄 수 없다. */
+        /* 애니메이션은 타임라인의 개념으로 시작점인 0%부터 끝점인 100%로 표현되며, 그 사이에 퍼센트를 이용해 키프레임을 지정할 수 있다. */
+        /* 키 프레임의 선언법: @keyframes 애니메이션 이름 */
+        @keyframes sample-ani {
+            0% {
+                transform:  translate(0, 0);
+            }
+            50% {
+                transform: translate(300px, 0);
+            }
+            100% {
+                transform: translate(400px, 500px);
+            }
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #fff000;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* 키 프레임 생성 후 애니메이션을 주고 그 값에 생성한 키프레임 애니메이션 이름을 넣는다. 무한 애니메이션 = infinite*/
+            animation: sample-ani 2s cubic-bezier(0.25, 0.1, 0.85, 1.68) infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Animation</h1>
+        <div class="box">BOX</div>
+</body>
+
+</html>
