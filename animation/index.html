@@ -16,6 +16,7 @@
             }
             50% {
                 transform: translate(300px, 0);
+                background: red;
             }
             100% {
                 transform: translate(400px, 500px);
@@ -29,8 +30,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* 키 프레임 생성 후 애니메이션을 주고 그 값에 생성한 키프레임 애니메이션 이름을 넣는다. 무한 애니메이션 = infinite*/
-            animation: sample-ani 2s cubic-bezier(0.25, 0.1, 0.85, 1.68) infinite;
+            /* 키 프레임 생성 후 애니메이션을 주고 그 값에 생성한 키프레임 애니메이션 이름을 넣는다. 무한 애니메이션 = infinite 애니메이션 경로 왕복 = alternate 애니메이션 반대로 = reverse */
+            /* 애니메이션이 종료 위치에 남도록 = forwards */
+            animation: sample-ani 3s linear forwards;
+        }
+        .box:hover {
+            /* 애니메이션 플레이 스테이트 = 에니메이션을 일시정지 시킬건지 재생시킬건지를 결정 */
+            animation-play-state: paused;
         }
     </style>
 </head>
