@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frame by frame</title>
+    <style>
+        @keyframes raccoon-ani {
+            to {
+                background-position: -1500px 0;
+            }
+        }
+        .raccoon {
+            width: 150px;
+            height: 150px;
+            background: url('./images/sprite_raccoon.png') no-repeat 0 0 / auto 150px;
+            animation: raccoon-ani 1s infinite steps(10);
+        }
+    </style>
+</head>
+<body>
+    <!-- frame by frame 애니메이션 = 전통적인 셀 방식 애니메이션으로 장면 장면마다 구현해서 애니메이션하는 방식 -> 이미지 스프라이트가 필요 -> 통 이미지에서 일정 부분만을 표현하고 일정 간격으로 이동시키면서 애니메이션을 표현 -->
+    <div class="raccoon"></div>
+</body>
+</html>
